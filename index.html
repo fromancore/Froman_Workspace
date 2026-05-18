@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froman Workspace | Luisa Fernanda Román Hernández</title>
+    
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for modern icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="glow-text">Froman</span>Workspace
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#setup3d" class="nav-link">Setup 3D</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section fade-in">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-subtitle">Hola, soy</h2>
+                    <h1 class="hero-title">Luisa Fernanda <br> <span class="highlight">Román Hernández</span></h1>
+                    <p class="hero-role">Estudiante de Ingeniería en Sistemas Computacionales</p>
+                    <p class="hero-tagline">"Code, creativity and technology in one digital workspace."</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-secondary">Contáctame</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-container glow-effect">
+                        <img src="assets/AVATAR.png" alt="Avatar de Luisa" class="avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=Luisa+Roman&background=0A0F1A&color=00F0FF&size=256'">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <i class='bx bx-chevron-down'></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="about" class="about section fade-in">
+            <div class="section-header">
+                <h2 class="section-title">Sobre <span class="highlight">Mí</span></h2>
+            </div>
+            <div class="about-card glass-panel">
+                <div class="about-content">
+                    <p>Soy <strong>Luisa Fernanda Román Hernández</strong>, estudiante de <strong>5to semestre</strong> de <strong>Ingeniería en Sistemas Computacionales</strong> en el <strong>Tecnológico Nacional de México / Instituto Tecnológico de Mérida, Campus Poniente</strong>.</p>
+                    <p>Me apasiona aprender cosas nuevas y explorar áreas relacionadas con la tecnología, especialmente el desarrollo web, la inteligencia artificial y el diseño 3D. Actualmente estoy fortaleciendo mis habilidades en programación y herramientas digitales para crear proyectos funcionales, creativos y profesionales.</p>
+                </div>
+                <div class="about-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="skills" class="skills section fade-in">
+            <div class="section-header">
+                <h2 class="section-title">Mis <span class="highlight">Habilidades</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-panel">
+                    <i class='bx bxl-python skill-icon'></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bxl-java skill-icon'></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bx-cube-alt skill-icon'></i>
+                    <h3>Blender</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bxl-github skill-icon'></i>
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bx-code-block skill-icon'></i>
+                    <h3>VS Code</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bxl-html5 skill-icon'></i>
+                    <h3>HTML / CSS</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class='bx bxl-javascript skill-icon'></i>
+                    <h3>JavaScript</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="projects" class="projects section fade-in">
+            <div class="section-header">
+                <h2 class="section-title">Mis <span class="highlight">Proyectos</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Placeholder Card 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-img-placeholder">
+                        <i class='bx bx-image'></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Placeholder 1</h3>
+                        <p>Descripción breve del proyecto, tecnologías usadas y el impacto generado.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-icon"><i class='bx bxl-github'></i> Code</a>
+                            <a href="#" class="btn-icon"><i class='bx bx-link-external'></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Placeholder Card 2 -->
+                <div class="project-card glass-panel">
+                    <div class="project-img-placeholder">
+                        <i class='bx bx-image'></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Placeholder 2</h3>
+                        <p>Descripción breve del proyecto, tecnologías usadas y el impacto generado.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-icon"><i class='bx bxl-github'></i> Code</a>
+                            <a href="#" class="btn-icon"><i class='bx bx-link-external'></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-more">
+                <p>Próximamente más proyectos...</p>
+            </div>
+        </section>
+
+        <!-- Setup 3D Section -->
+        <section id="setup3d" class="setup3d section fade-in">
+            <div class="section-header">
+                <h2 class="section-title">Setup <span class="highlight">3D</span></h2>
+            </div>
+            <div class="model-container glass-panel glow-effect-large">
+                <div class="model-placeholder-content">
+                    <i class='bx bx-cube model-icon'></i>
+                    <h3>Próximamente: Setup 3D Interactivo</h3>
+                    <p>Espacio preparado para integrar un modelo GLB/GLTF de Blender.</p>
+                    
+                    <!-- 
+                        TODO: Integrar <model-viewer> aquí
+                        Ejemplo:
+                        <model-viewer src="assets/3d/setup.glb" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1"></model-viewer>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contact" class="contact section fade-in">
+            <div class="section-header">
+                <h2 class="section-title">Ponte en <span class="highlight">Contacto</span></h2>
+            </div>
+            <div class="contact-grid">
+                <a href="https://github.com/fromancore" target="_blank" class="contact-card glass-panel">
+                    <i class='bx bxl-github contact-icon'></i>
+                    <div class="contact-info">
+                        <h4>GitHub</h4>
+                        <p>fromancore</p>
+                    </div>
+                </a>
+                <a href="https://instagram.com/froman048" target="_blank" class="contact-card glass-panel">
+                    <i class='bx bxl-instagram contact-icon'></i>
+                    <div class="contact-info">
+                        <h4>Instagram</h4>
+                        <p>froman048</p>
+                    </div>
+                </a>
+                <a href="#" class="contact-card glass-panel">
+                    <i class='bx bxl-discord-alt contact-icon'></i>
+                    <div class="contact-info">
+                        <h4>Discord</h4>
+                        <p>fernandaroman</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="glow-text">Froman</span>Workspace
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="current-year"></span> Luisa Fernanda Román Hernández.</p>
+                <p>Ingeniería en Sistemas Computacionales</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/fromancore"><i class='bx bxl-github'></i></a>
+                <a href="https://instagram.com/froman048"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
