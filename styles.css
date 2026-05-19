@@ -14,6 +14,10 @@
     --glow-cyan: rgba(0, 240, 255, 0.3);
     --glow-purple: rgba(176, 38, 255, 0.3);
     
+    --blob-purple: rgba(176, 38, 255, 0.15);
+    --blob-cyan: rgba(0, 240, 255, 0.15);
+    --blob-blue: rgba(0, 85, 255, 0.15);
+    
     /* Typography */
     --font-main: 'Inter', sans-serif;
     --font-display: 'Space Grotesk', sans-serif;
@@ -33,6 +37,10 @@
     --glass-border: rgba(0, 0, 0, 0.1);
     --glow-cyan: rgba(0, 240, 255, 0.4);
     --glow-purple: rgba(176, 38, 255, 0.4);
+
+    --blob-purple: rgba(176, 38, 255, 0.25);
+    --blob-cyan: rgba(0, 240, 255, 0.25);
+    --blob-blue: rgba(0, 85, 255, 0.25);
 }
 
 /* ==========================================================================
@@ -132,6 +140,60 @@ ul {
     transform: translateY(0);
 }
 
+/* Background Blobs */
+.bg-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.8;
+    animation: floatBlob 20s infinite alternate ease-in-out;
+    transition: background var(--transition);
+}
+
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--blob-purple);
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--blob-cyan);
+    bottom: -150px;
+    right: -100px;
+    animation-duration: 25s;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    width: 700px;
+    height: 700px;
+    background: var(--blob-blue);
+    top: 30%;
+    left: 40%;
+    animation-duration: 30s;
+    animation-delay: -15s;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(150px, 100px) scale(1.2); }
+}
+
 /* ==========================================================================
    Navbar
    ========================================================================== */
@@ -169,7 +231,28 @@ ul {
     font-weight: 700;
     display: flex;
     align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
     gap: 5px;
+}
+
+.nav-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-cyan);
+    box-shadow: 0 0 10px var(--glow-cyan), 0 0 5px var(--glow-purple);
+    transition: var(--transition);
+}
+
+.nav-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--glow-cyan), 0 0 10px var(--glow-purple);
 }
 
 .nav-list {
