@@ -100,4 +100,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Video Modal Logic
+    const btnViewRive = document.getElementById('btn-view-rive');
+    const videoModal = document.getElementById('video-modal');
+    const closeModal = document.getElementById('close-modal');
+    
+    if (btnViewRive && videoModal && closeModal) {
+        btnViewRive.addEventListener('click', (e) => {
+            e.preventDefault();
+            videoModal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        closeModal.addEventListener('click', () => {
+            videoModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        // Close on outside click
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // 3D Model Modal Logic
+    const btnExplore3d = document.getElementById('btn-explore-3d');
+    const modelModal = document.getElementById('model-modal');
+    const closeModelModal = document.getElementById('close-model-modal');
+
+    if (btnExplore3d && modelModal && closeModelModal) {
+        btnExplore3d.addEventListener('click', (e) => {
+            e.preventDefault();
+            modelModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeModelModal.addEventListener('click', () => {
+            modelModal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        modelModal.addEventListener('click', (e) => {
+            if (e.target === modelModal) {
+                modelModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
 });

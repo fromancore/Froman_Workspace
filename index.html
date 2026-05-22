@@ -13,6 +13,9 @@
     <!-- Boxicons for modern icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
+    <!-- Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -64,7 +67,7 @@
                     <h2 class="hero-subtitle">Hola, soy</h2>
                     <h1 class="hero-title">Luisa Fernanda <br> <span class="highlight">Román Hernández</span></h1>
                     <p class="hero-role">Estudiante de Ingeniería en Sistemas Computacionales</p>
-                    <p class="hero-tagline">"Code, creativity and technology in one digital workspace."</p>
+                    <p class="hero-tagline">Froman Workspace es un portfolio inspirado en la fusión de los estilos Cozy Tech y Dark Tech, donde la tecnología, la creatividad y la comodidad se combinan para crear experiencias digitales modernas y visualmente acogedoras.</p>
                     
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
@@ -91,8 +94,19 @@
             </div>
             <div class="about-card glass-panel">
                 <div class="about-content">
-                    <p>Soy <strong>Luisa Fernanda Román Hernández</strong>, estudiante de <strong>5to semestre</strong> de <strong>Ingeniería en Sistemas Computacionales</strong> en el <strong>Tecnológico Nacional de México / Instituto Tecnológico de Mérida, Campus Poniente</strong>.</p>
-                    <p>Me apasiona aprender cosas nuevas y explorar áreas relacionadas con la tecnología, especialmente el desarrollo web, la inteligencia artificial y el diseño 3D. Actualmente estoy fortaleciendo mis habilidades en programación y herramientas digitales para crear proyectos funcionales, creativos y profesionales.</p>
+                    <p>Soy <strong>Luisa Fernanda Román Hernández</strong>, estudiante de Ingeniería en Sistemas Computacionales apasionada por la tecnología, el desarrollo web y la inteligencia artificial.</p>
+                    <p>Me interesa crear experiencias digitales modernas que combinen creatividad, diseño y funcionalidad, explorando áreas como el diseño 3D, las interfaces interactivas y la simulación visual.</p>
+                    <p>Actualmente me desempeño como encargada de mercadotecnia en <strong>Infinicom</strong>, desarrollando contenido digital y estrategias visuales orientadas al sector tecnológico. Además, soy líder del <strong>Departamento de Operaciones (DepOps)</strong> en el capítulo estudiantil <strong>AAAIMX</strong>, participando en la organización y desarrollo de iniciativas tecnológicas y colaborativas.</p>
+                    <p>Disfruto aprender constantemente y trabajar en proyectos que integren programación, diseño y tecnología.</p>
+                    
+                    <div class="about-badges">
+                        <span class="badge glass-panel">💻 Web Development</span>
+                        <span class="badge glass-panel">🤖 Artificial Intelligence</span>
+                        <span class="badge glass-panel">🎨 3D Design</span>
+                        <span class="badge glass-panel">📢 Tech Marketing</span>
+                        <span class="badge glass-panel">🚀 Flight Simulation</span>
+                        <span class="badge glass-panel">🛠️ Operations Leadership</span>
+                    </div>
                 </div>
                 <div class="about-icon">
                     <i class='bx bx-code-alt'></i>
@@ -159,6 +173,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/fromancore/login_whit_rive_animation1" target="_blank" class="btn-icon"><i class='bx bxl-github'></i> Code</a>
+                            <button id="btn-view-rive" class="btn-visit"><i class='bx bx-play-circle'></i> Ver</button>
                         </div>
                     </div>
                 </div>
@@ -168,7 +183,7 @@
                         <img src="assets/Nebula.png" alt="NEBULA AEROSYSTEM" class="project-gif" style="object-fit: cover; width: 100%; height: 100%;">
                     </div>
                     <div class="project-info">
-                        <h3>NEBULA AEROSYSTEM</h3>
+                        <h3>Diseño de un Simulador de Vuelo Profesional</h3>
                         <p>Plataforma web de simulador de vuelo aeroespacial con análisis dinámico de presupuesto y diseño UI glassmorphism premium.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
@@ -178,6 +193,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/fromancore" target="_blank" class="btn-icon"><i class='bx bxl-github'></i> Code</a>
+                            <a href="https://design-of-a-high-performance-profes.vercel.app/" target="_blank" class="btn-visit"><i class='bx bx-rocket'></i> Visitar</a>
                         </div>
                     </div>
                 </div>
@@ -191,18 +207,16 @@
         <section id="setup3d" class="setup3d section fade-in">
             <div class="section-header">
                 <h2 class="section-title">Setup <span class="highlight">3D</span></h2>
+                <p class="section-subtitle" style="max-width: 800px; margin: 15px auto 0; color: var(--text-secondary); line-height: 1.6;">Explora un setup 3D diseñado y modelado en Blender, inspirado en un espacio personal que combina comodidad, tranquilidad y creatividad. El entorno integra elementos tecnológicos y decorativos con la intención de crear un ambiente acogedor, motivador y productivo, reflejando tanto identidad personal como pasión por el desarrollo y el diseño.</p>
             </div>
-            <div class="model-container glass-panel glow-effect-large">
-                <div class="model-placeholder-content">
-                    <i class='bx bx-cube model-icon'></i>
-                    <h3>Próximamente: Setup 3D Interactivo</h3>
-                    <p>Espacio preparado para integrar un modelo GLB/GLTF de Blender.</p>
-                    
-                    <!-- 
-                        TODO: Integrar <model-viewer> aquí
-                        Ejemplo:
-                        <model-viewer src="assets/3d/setup.glb" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1"></model-viewer>
-                    -->
+            <div class="model-container glass-panel glow-effect-large" style="position: relative; overflow: hidden;">
+                <!-- Embedded 3D Viewer -->
+                <model-viewer src="assets/setup_FER" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" style="width: 100%; height: 100%;"></model-viewer>
+                
+                <!-- Action Buttons Overlay -->
+                <div style="position: absolute; bottom: 20px; display: flex; gap: 15px; justify-content: center; width: 100%; z-index: 10;">
+                    <button id="btn-explore-3d" class="btn-visit"><i class='bx bx-expand'></i> Explorar</button>
+                    <a href="assets/setup_FER" download class="btn-icon"><i class='bx bx-download'></i> Descargar</a>
                 </div>
             </div>
         </section>
@@ -234,9 +248,36 @@
                         <p>fernandaroman</p>
                     </div>
                 </a>
+                <a href="mailto:fernandaronandez@gmail.com" class="contact-card glass-panel">
+                    <i class='bx bx-envelope contact-icon'></i>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p>fernandaronandez@gmail.com</p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal" id="close-modal"><i class='bx bx-x'></i></span>
+            <div class="video-container">
+                <video src="assets/demo.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Modal -->
+    <div id="model-modal" class="modal">
+        <div class="modal-content glass-panel" style="width: 90vw; height: 85vh; max-width: none;">
+            <span class="close-modal" id="close-model-modal"><i class='bx bx-x'></i></span>
+            <div class="video-container" style="height: 100%; background: transparent;">
+                <model-viewer src="assets/setup_FER" camera-controls auto-rotate environment-image="neutral" shadow-intensity="1" style="width: 100%; height: 100%;"></model-viewer>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
